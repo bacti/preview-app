@@ -1,14 +1,16 @@
 import React from 'react'
 import { StyleSheet, WebView } from 'react-native'
+import QrReader from './src/QrReader'
 
 export default class App extends React.Component
 {
     render()
     {
         return (
-            <WebView
-                source={{uri: 'https://bacti.github.io/webvr-boilerplate/'}}
-            />
+            <QrReader />
+            // <WebView
+            //     source={{uri: 'https://bacti.github.io/webvr-boilerplate/'}}
+            // />
         )
     }
 }
