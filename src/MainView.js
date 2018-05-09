@@ -7,7 +7,7 @@ export default class MainView extends React.Component
     {
         return (
             <WebView
-                source={{uri: 'https://bacti.github.io/webvr-boilerplate/'}}
+                source={{ uri: this.props.uri }}
             />
         )
     }

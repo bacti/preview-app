@@ -16,6 +16,8 @@ export default class QrReader extends React.Component
         this.props.navigator.push(
         {
             screen: 'webapp.MainView',
+            navigatorStyle: { navBarHidden: true },
+            passProps: { uri: e.data }, 
         })
     }
 
