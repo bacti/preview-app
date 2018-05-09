@@ -11,42 +11,31 @@ export default class QrReader extends React.Component
     constructor(props)
     {
         super(props)
-        this.state =
-        {
-            width: 0,
-            height: 0,
-        }
+        this.state = { width: 0, height: 0 }
     }
 
-    onSuccess(e)
+    OnRead(info)
     {
         this.props.navigator.push(
         {
             screen: 'webapp.MainView',
-            navigatorStyle:
-            {
-                navBarHidden: true,
-            },
-            passProps: { uri: e.data }, 
+            navigatorStyle: { navBarHidden: true },
+            passProps: { uri: info.data }, 
         })
     }
 
-    onLayout(e)
+    OnLayout()
     {
         const { width, height } = Dimensions.get('window')
-        this.setState(
-        {
-            width: width,
-            height: height,
-        })
+        this.setState({ width: width, height: height })
     }
 
     render()
     {
         return (
-            <View onLayout={this.onLayout.bind(this)}>
+            <View onLayout={this.OnLayout.bind(this)}>
                 <QRCodeScanner
-                    onRead={this.onSuccess.bind(this)}
+                    onRead={this.OnRead.bind(this)}
                     cameraStyle={
                     {
                         width: this.state.width,
