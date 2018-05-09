@@ -1,4 +1,5 @@
 import React from 'react'
+import { WebView } from 'react-native'  
 
 export default class Web extends React.Component
 {
@@ -6,7 +7,7 @@ export default class Web extends React.Component
     {
         return (
             <WebView
-                source={{uri: this.props.uri}}
+                source={{uri: 'https://bacti.github.io/webvr-boilerplate/'}}
             />
         )
     }
