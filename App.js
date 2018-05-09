@@ -7,10 +7,10 @@ export default class App extends React.Component
     render()
     {
         return (
-            // <QrReader />
-            <WebView
-                source={{uri: 'https://bacti.github.io/webvr-boilerplate/'}}
-            />
+            <QrReader />
+            // <WebView
+            //     source={{uri: 'https://bacti.github.io/webvr-boilerplate/'}}
+            // />
         )
     }
 }

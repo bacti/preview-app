@@ -1,6 +1,7 @@
 import React from 'react'
 import {
     AppRegistry,
+    Dimensions,
     StyleSheet,
     Text,
     TouchableOpacity,
@@ -22,6 +23,7 @@ export default class QrReader extends React.Component
         return (
             <QRCodeScanner
                 onRead={this.onSuccess.bind(this)}
+                cameraStyle={{height: Dimensions.get('window').height}}
             />
         )        
     }
@@ -29,25 +31,8 @@ export default class QrReader extends React.Component
 
 const styles = StyleSheet.create(
 {
-    centerText:
+    camera:
     {
-        flex: 1,
-        fontSize: 18,
-        padding: 32,
-        color: '#777',
-    },
-    textBold:
-    {
-        fontWeight: '500',
-        color: '#000',
-    },
-    buttonText:
-    {
-        fontSize: 21,
-        color: 'rgb(0,122,255)',
-    },
-    buttonTouchable:
-    {
-        padding: 16,
+        height: Dimensions.get('window').height
     },
 })        
