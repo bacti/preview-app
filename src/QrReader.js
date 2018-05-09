@@ -13,10 +13,9 @@ export default class QrReader extends React.Component
 {
     onSuccess(e)
     {
-        console.log(e.data)
         this.props.navigator.push(
         {
-            screen: 'webapp.Web',
+            screen: 'webapp.MainView',
         })
     }
 

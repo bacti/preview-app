@@ -1,7 +1,7 @@
 import React from 'react'
 import { WebView } from 'react-native'  
 
-export default class Web extends React.Component
+export default class MainView extends React.Component
 {
     render()
     {

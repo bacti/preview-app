@@ -1,6 +1,6 @@
 import { Navigation } from 'react-native-navigation'
 import QrReader from './QrReader'
-import Web from './Web'
+import MainView from './MainView'
 
 Navigation.registerComponent('webapp.QrReader', () => QrReader)
-Navigation.registerComponent('webapp.Web', () => Web)
+Navigation.registerComponent('webapp.MainView', () => MainView)
