@@ -44,10 +44,7 @@ export default class QrReader extends React.Component
     render()
     {
         return (
-            <View
-                onLayout={this.onLayout.bind(this)}
-                style={styles.container}
-            >
+            <View onLayout={this.onLayout.bind(this)}>
                 <QRCodeScanner
                     onRead={this.onSuccess.bind(this)}
                     cameraStyle={
@@ -63,11 +60,4 @@ export default class QrReader extends React.Component
 
 const styles = StyleSheet.create(
 {
-    container:
-    {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF'
-    },
 })        
