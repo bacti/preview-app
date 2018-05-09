@@ -13,7 +13,7 @@ Navigation.startSingleScreenApp(
         },
     },
     animationType: 'slide-down',
-});
+})
 
 export default class App extends React.Component
 {
