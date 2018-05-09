@@ -1,8 +1,7 @@
 import React from 'react'
 import { StyleSheet, WebView } from 'react-native'
 import { Navigation } from 'react-native-navigation'
-import { registerScreens } from './src/screens'
-import QrReader from './src/QrReader'
+import { registerScreens } from './screens'
 
 registerScreens()
 
@@ -12,8 +11,7 @@ Navigation.startSingleScreenApp(
     {
         screen: 'webapp.QrReader',
         title: 'QrReader',
-        navigatorStyle: {},
-        navigatorButtons: {},
+        navigatorStyle: { navBarHidden: true },
     },
     animationType: 'slide-down',
 });
