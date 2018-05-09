@@ -1,9 +1,6 @@
 import React from 'react'
-import { StyleSheet, WebView } from 'react-native'
 import { Navigation } from 'react-native-navigation'
-import { registerScreens } from './screens'
-
-registerScreens()
+import './Screens'
 
 Navigation.startSingleScreenApp(
 {
@@ -21,15 +18,5 @@ export default class App extends React.Component
     render()
     {
         return null
-        // return (
-        //     <QrReader />
-        //     // <WebView
-        //     //     source={{uri: 'https://bacti.github.io/webvr-boilerplate/'}}
-        //     // />
-        // )
     }
 }
-
-const styles = StyleSheet.create(
-{
-})

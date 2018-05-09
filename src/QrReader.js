@@ -13,9 +13,11 @@ export default class QrReader extends React.Component
 {
     onSuccess(e)
     {
-        Linking
-            .openURL(e.data)
-            .catch(err => console.error('An error occured', err))        
+        console.log(e.data)
+        this.props.navigator.push(
+        {
+            screen: 'webapp.Web',
+        })
     }
 
     render()
