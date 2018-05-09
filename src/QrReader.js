@@ -31,8 +31,4 @@ export default class QrReader extends React.Component
 
 const styles = StyleSheet.create(
 {
-    camera:
-    {
-        height: Dimensions.get('window').height
-    },
 })        
