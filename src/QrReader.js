@@ -1,16 +1,23 @@
 import React from 'react'
 import {
-    AppRegistry,
     Dimensions,
     StyleSheet,
-    Text,
-    TouchableOpacity,
-    Linking,
+    View,
 } from 'react-native'        
 import QRCodeScanner from 'react-native-qrcode-scanner'        
 
 export default class QrReader extends React.Component
 {
+    constructor(props)
+    {
+        super(props)
+        this.state =
+        {
+            width: 0,
+            height: 0,
+        }
+    }
+
     onSuccess(e)
     {
         this.props.navigator.push(
@@ -24,22 +31,43 @@ export default class QrReader extends React.Component
         })
     }
 
+    onLayout(e)
+    {
+        const { width, height } = Dimensions.get('window')
+        this.setState(
+        {
+            width: width,
+            height: height,
+        })
+    }
+
     render()
     {
         return (
-            <QRCodeScanner
-                onRead={this.onSuccess.bind(this)}
-                cameraStyle={styles.camera}
-            />
+            <View
+                onLayout={this.onLayout.bind(this)}
+                style={styles.container}
+            >
+                <QRCodeScanner
+                    onRead={this.onSuccess.bind(this)}
+                    cameraStyle={
+                    {
+                        width: this.state.width,
+                        height: this.state.height,
+                    }}
+                />
+            </View>
         )        
     }
 }
 
 const styles = StyleSheet.create(
 {
-    camera:
+    container:
     {
-        width: Dimensions.get('window').width,
-        height: Dimensions.get('window').height,
-    }
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#F5FCFF'
+    },
 })        
