@@ -7,8 +7,10 @@ Navigation.startSingleScreenApp(
     screen:
     {
         screen: 'webapp.QrReader',
-        title: 'QrReader',
-        navigatorStyle: { navBarHidden: true },
+        navigatorStyle:
+        {
+            navBarHidden: true,
+        },
     },
     animationType: 'slide-down',
 });

@@ -16,7 +16,10 @@ export default class QrReader extends React.Component
         this.props.navigator.push(
         {
             screen: 'webapp.MainView',
-            navigatorStyle: { navBarHidden: true },
+            navigatorStyle:
+            {
+                navBarHidden: true,
+            },
             passProps: { uri: e.data }, 
         })
     }
@@ -26,7 +29,7 @@ export default class QrReader extends React.Component
         return (
             <QRCodeScanner
                 onRead={this.onSuccess.bind(this)}
-                cameraStyle={{height: Dimensions.get('window').height}}
+                cameraStyle={styles.camera}
             />
         )        
     }
@@ -34,4 +37,9 @@ export default class QrReader extends React.Component
 
 const styles = StyleSheet.create(
 {
+    camera:
+    {
+        width: Dimensions.get('window').width,
+        height: Dimensions.get('window').height,
+    }
 })        
