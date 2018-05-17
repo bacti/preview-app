@@ -8,6 +8,8 @@ export default class MainView extends React.Component
         return (
             <WebView
                 source={{ uri: this.props.uri }}
+                mediaPlaybackRequiresUserAction={false}
+                allowsInlineMediaPlayback={true}
             />
         )
     }
