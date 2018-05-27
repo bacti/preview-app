@@ -4,7 +4,7 @@ import { WebView } from 'react-native'
 
 export default class MainView extends React.Component
 {
-    componentDidMount()
+    componentWillMount()
     {
         Orientation.lockToLandscape()
     }
